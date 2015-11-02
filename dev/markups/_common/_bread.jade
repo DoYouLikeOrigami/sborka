@@ -1,0 +1,7 @@
+﻿.bread
+	.container
+		ul.bread__list
+			- var items = ['Главная', 'Каталог']
+			each item in items
+				li(class="bread__item" + ((item === 'Каталог') ? ' active' : '' ) )
+					a(href="#", class="bread__link")= item

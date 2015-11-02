@@ -1,0 +1,27 @@
+﻿.header {
+	background: #ffffff;
+}
+
+/* header-top */
+.header-top {
+	border-bottom: 1px solid #ebedef;
+	padding: 23px 0;
+}
+
+.socials__item {
+	@include inlineblock (middle);
+	margin-left: 12px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.socials__link {
+	display: block;
+	width: 26px;
+	height: 26px;
+	@include border-radius(50%);
+	background: #333333;
+	position: relative;
+}
