@@ -10,6 +10,7 @@
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&amp;subset=latin,cyrillic" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen, projection, print">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen, projection, print">
 		<script src="/js/_vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
@@ -159,7 +160,7 @@
 															<input name="" type="text" placeholder="" class="filter__slider-input filter__slider-input_to">
 														</div>
 													</div>
-													<div class="filter__slider-element"></div>
+													<div data-min="0" data-max="30000" class="filter__slider-element"></div>
 												</div>
 											</div>
 										</li>
@@ -245,7 +246,268 @@
 										</div>
 									</div>
 								</div>
-								<div class="products"></div>
+								<div class="products">
+									<ul class="products__list">
+										<li class="products__item">
+											<div class="products__item-inner">
+												<div class="products__left">
+													<div class="products__slideshow">
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-list">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-list-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189998</div>
+														</div>
+													</div>
+													<div class="products__desc">
+														<div class="products__desc-title">Sumsung FT-9 GALAXY S</div>
+														<ul class="products__desc-options"> 
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Тип SIM-карты</div>
+																<div class="products__options-value">Micro-SIM</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">Количество SIM-карт</div>
+																<div class="products__options-value">1</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Цвет</div>
+																<div class="products__options-value">Белый</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">ОС</div>
+																<div class="products__options-value">Android</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Связь 3G</div>
+																<div class="products__options-value">Есть</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">4G(LTE)</div>
+																<div class="products__options-value">Нет</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">GPS-модуль</div>
+																<div class="products__options-value">Есть</div>
+															</li>
+														</ul>
+														<div data-rating="4" class="products__rating"></div>
+													</div>
+												</div>
+												<div class="products__right">
+													<div class="products__info">
+														<div class="products__price">11 390<i class="rub"></i></div>
+													</div>
+													<div class="products__info-button"><a href="#" class="products__buy-btn">В корзину</a>
+														<div class="products__availability">В наличии</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="products__item">
+											<div class="products__item-inner">
+												<div class="products__left">
+													<div class="products__slideshow">
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-list">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-list-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189998</div>
+														</div>
+													</div>
+													<div class="products__desc">
+														<div class="products__desc-title">Sumsung FT-9 GALAXY S</div>
+														<ul class="products__desc-options"> 
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Тип SIM-карты</div>
+																<div class="products__options-value">Micro-SIM</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">Количество SIM-карт</div>
+																<div class="products__options-value">1</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Цвет</div>
+																<div class="products__options-value">Белый</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">ОС</div>
+																<div class="products__options-value">Android</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Связь 3G</div>
+																<div class="products__options-value">Есть</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">4G(LTE)</div>
+																<div class="products__options-value">Нет</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">GPS-модуль</div>
+																<div class="products__options-value">Есть</div>
+															</li>
+														</ul>
+														<div data-rating="4" class="products__rating"></div>
+													</div>
+												</div>
+												<div class="products__right">
+													<div class="products__info">
+														<div class="products__price">11 390<i class="rub"></i></div>
+													</div>
+													<div class="products__info-button"><a href="#" class="products__buy-btn">В корзину</a>
+														<div class="products__availability">В наличии</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="products__item">
+											<div class="products__item-inner">
+												<div class="products__left">
+													<div class="products__slideshow">
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-list">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-list-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189998</div>
+														</div>
+													</div>
+													<div class="products__desc">
+														<div class="products__desc-title">Sumsung FT-9 GALAXY S</div>
+														<ul class="products__desc-options"> 
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Тип SIM-карты</div>
+																<div class="products__options-value">Micro-SIM</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">Количество SIM-карт</div>
+																<div class="products__options-value">1</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Цвет</div>
+																<div class="products__options-value">Белый</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">ОС</div>
+																<div class="products__options-value">Android</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Связь 3G</div>
+																<div class="products__options-value">Есть</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">4G(LTE)</div>
+																<div class="products__options-value">Нет</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">GPS-модуль</div>
+																<div class="products__options-value">Есть</div>
+															</li>
+														</ul>
+														<div data-rating="4" class="products__rating"></div>
+													</div>
+												</div>
+												<div class="products__right">
+													<div class="products__info">
+														<div class="products__price">11 390<i class="rub"></i></div>
+													</div>
+													<div class="products__info-button"><a href="#" class="products__buy-btn">В корзину</a>
+														<div class="products__availability">В наличии</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="products__item">
+											<div class="products__item-inner">
+												<div class="products__left">
+													<div class="products__slideshow">
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-list">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-list-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189998</div>
+														</div>
+													</div>
+													<div class="products__desc">
+														<div class="products__desc-title">Sumsung FT-9 GALAXY S</div>
+														<ul class="products__desc-options"> 
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Тип SIM-карты</div>
+																<div class="products__options-value">Micro-SIM</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">Количество SIM-карт</div>
+																<div class="products__options-value">1</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Цвет</div>
+																<div class="products__options-value">Белый</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">ОС</div>
+																<div class="products__options-value">Android</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">Связь 3G</div>
+																<div class="products__options-value">Есть</div>
+															</li>
+															<li class="products__option-item ">
+																<div class="products__options-key">4G(LTE)</div>
+																<div class="products__options-value">Нет</div>
+															</li>
+															<li class="products__option-item products__option-item-odd">
+																<div class="products__options-key">GPS-модуль</div>
+																<div class="products__options-value">Есть</div>
+															</li>
+														</ul>
+														<div data-rating="4" class="products__rating"></div>
+													</div>
+												</div>
+												<div class="products__right">
+													<div class="products__info">
+														<div class="products__price">11 390<i class="rub"></i></div>
+													</div>
+													<div class="products__info-button"><a href="#" class="products__buy-btn">В корзину</a>
+														<div class="products__availability">В наличии</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="pagination">
+									<ul class="pagination__list">
+										<li class="pagination__item pagination__item-prev"><a href="#" class="pagination__link">
+												<div class="pagination__mark"></div></a></li>
+										<li class="pagination__item"><a href="#" class="pagination__link">
+												<div class="pagination__mark">1</div></a></li>
+										<li class="pagination__item"><a href="#" class="pagination__link">
+												<div class="pagination__mark">2</div></a></li>
+										<li class="pagination__item"><a href="#" class="pagination__link">
+												<div class="pagination__mark">3</div></a></li>
+										<li class="pagination__item pagination__item-next"><a href="#" class="pagination__link">
+												<div class="pagination__mark"></div></a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 						<div class="attention">

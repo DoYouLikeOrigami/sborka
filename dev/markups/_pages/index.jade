@@ -33,6 +33,61 @@ block content
 												.sort__view-icon
 
 					.products
+						ul.products__list
+							- for (var i = 0; i < 4; i++)
+								li.products__item
+									.products__item-inner
+										.products__left
+											.products__slideshow
+												.products__slideshow-block
+													a(href="#").products__slideshow-display
+														img(src="http://lorempixel.com/200/200/technics/6", alt="").products__slideshow-img
+													ul.products__slideshow-list
+														-for (var j = 0; j < 3; j++)
+															li.products__slideshow-item
+																a(href="#").products__slideshow-link
+																	img(src="http://lorempixel.com/45/45/technics/" + j, alt="").products__slideshow-list-img
+												.products__article
+													.products__article-word Артикул
+													.products__article-num 189998
+											.products__desc
+												.products__desc-title Sumsung FT-9 GALAXY S
+												ul.products__desc-options 
+													-var options = {'Тип SIM-карты' : 'Micro-SIM', 'Количество SIM-карт' : '1', 'Цвет' : 'Белый', 'ОС' : 'Android', 'Связь 3G' : 'Есть', '4G(LTE)' : 'Нет', 'GPS-модуль' : 'Есть'}
+													- var index = 0
+													- for (item in options)
+														li(class="products__option-item " + ((index++ % 2) ? '' : 'products__option-item-odd') )
+															.products__options-key= item
+															.products__options-value= options[item]
+												div(data-rating="4").products__rating
+										.products__right
+											.products__info
+												.products__price 11 390
+													i.rub
+											.products__info-button
+												a(href="#").products__buy-btn В корзину
+												.products__availability В наличии
+					.pagination
+						ul.pagination__list
+							li.pagination__item.pagination__item-prev
+								a(href="#").pagination__link
+									.pagination__mark
+							- for (var i = 1; i < 4; i++)
+								li.pagination__item
+									a(href="#").pagination__link
+										.pagination__mark= i
+							li.pagination__item.pagination__item-next
+								a(href="#").pagination__link
+									.pagination__mark
+
+
+
+
+
+
+
+
+
 
 			.attention
 				.main__title Важная информация

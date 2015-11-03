@@ -36,8 +36,8 @@ var
 		},
 
 		js : {
-			location    : '- dev/scripts/main.js',
-			plugins     : '- dev/scripts/_plugins/*.js',
+			location    : 'dev/scripts/main.js',
+			plugins     : 'dev/scripts/_plugins/*.js',
 			destination : 'js'
 		},
 
