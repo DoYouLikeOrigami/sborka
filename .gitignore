@@ -39,5 +39,6 @@ Thumbs.db
 /.sass-cache
 /node_modules
 /- dev/bower
+bower_components
 /.idea
 prod

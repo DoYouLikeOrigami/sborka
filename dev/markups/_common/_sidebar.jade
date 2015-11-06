@@ -7,7 +7,7 @@
 					a(href="#").categories__link= item
 	.filter
 		ul.filter__list
-			li.filter__item
+			li.filter__item.active
 				.filter__title
 					a(href="#").filter__title-link Наличие в магазинах
 				.filter__content
@@ -20,7 +20,7 @@
 									.filter__choose-elem
 									span.filter__choose-text= item
 
-			li.filter__item
+			li.filter__item.active
 				.filter__title
 					a(href="#").filter__title-link Бренды
 				.filter__content
@@ -35,7 +35,7 @@
 						wrapper.filter__reset--wrap
 							a(href="#").filter__reset Сбросить фильтр
 
-			li.filter__item 
+			li.filter__item.active
 				.filter__title
 					a(href="#").filter__title-link Цена
 				.filter__content
@@ -49,7 +49,7 @@
 								input(name="", type="text", placeholder="").filter__slider-input.filter__slider-input_to
 						div(data-min="0", data-max="30000").filter__slider-element
 
-			li.filter__item 
+			li.filter__item.active
 				.filter__title
 					a(href="#").filter__title-link Цвет
 				.filter__content
@@ -61,7 +61,7 @@
 					wrapper.filter__reset--wrap
 						a(href="#").filter__reset Сбросить фильтр
 
-			li.filter__item
+			li.filter__item.active
 				.filter__title
 					a(href="#").filter__title-link Операционная система
 				.filter__content

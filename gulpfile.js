@@ -19,13 +19,13 @@ var
 		jade : {
 			location    : 'dev/markups/**/*.jade',
 			compiled    : 'dev/markups/_pages/*.jade',
-			destination : '.'
+			destination : 'prod'
 		},
 
 		scss : {
 			location    : 'dev/styles/**/*.scss',
-			entryPoint  : 'css/main.css',
-			destination : 'css'
+			entryPoint  : 'prod/css/main.css',
+			destination : 'prod/css'
 		},
 
 		compass : {
@@ -38,12 +38,12 @@ var
 		js : {
 			location    : 'dev/scripts/main.js',
 			plugins     : 'dev/scripts/_plugins/*.js',
-			destination : 'js'
+			destination : 'prod/js'
 		},
 
 		browserSync : {
-			baseDir : './',
-			watchPaths : ['*.html', 'css/*.css', 'js/*.js']
+			baseDir : 'prod',
+			watchPaths : ['prod/*.html', 'prod/css/*.css', 'prod/js/*.js']
 		}
 	}
 

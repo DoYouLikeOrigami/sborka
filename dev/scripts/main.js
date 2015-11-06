@@ -8,12 +8,19 @@ var SliderWidget = ( function () {
 
 		from.val(values[0]);
 		to.val(values[1]);
-	}
+	};
+
+	var _moveSlider = function (e) {
+		console.log(e.val());
+		//console.log('moved');
+	};
 
 	return {
 		init: function () {
 
-			var Slider = $(".filter__slider-element");
+			var Slider = $(".filter__slider-element"),
+				sliderFrom = $('.filter__slider-input_from');
+				sliderTo = $('.filter__slider-input_to');
 
 			Slider.each(function () {
 				var $this = $(this),
@@ -34,6 +41,9 @@ var SliderWidget = ( function () {
 			    });
 			});
 
+			//sliderFrom.change(_moveSlider(sliderFrom));
+			//sliderTo.change(_moveSlider(sliderTo);
+
 		}
 	}
 }());
@@ -44,7 +54,7 @@ var RatingsWidget = ( function () {
 		var starsArray = [];
 		
 		for (var i = 0; i < 5; i++) {
-			var starClass = (i , rating) ? 'products__rating-stars-item products__rating-stars-item-filled' : 'products__rating-stars-item',
+			var starClass = (i < rating) ? 'products__rating-stars-item products__rating-stars-item-filled' : 'products__rating-stars-item',
 				star = $('<li>', {
 					class : starClass
 				});
@@ -106,15 +116,111 @@ var AccaWidget = ( function () {
 			duration = 300;
 
 		if (!item.hasClass('active')) {
-			items.removeClass('active');
+			//items.removeClass('active');
 			item.addClass('active');
-			otherContent.stop(true).slideUp(duration);
+			//otherContent.stop(true).slideUp(duration);
 			content.stop(true).slideDown(duration);
 		}
 		else {
 			item.removeClass('active');
-			otherContent.stop(true).slideUp(duration);
+			//otherContent.stop(true).slideUp(duration);
+			content.stop(true).slideUp(duration);
 		}
+	}
+
+	return {
+		init: function () {
+			_setUpListeners();
+		}
+	}
+}());
+
+var productsWidget = ( function () {
+
+	var _setUpListeners = function () {
+		$('.sort__view-link').on('click', _changeView);
+	};
+
+	var _changeView = function (e) {
+		e.preventDefault();
+
+		var trigger = $(this),
+			item = trigger.closest('.sort__view-item'),
+			items = $('.sort__view-item'),
+			list = $('.products__list'),
+			viewClass = 'products__list-' + trigger.data('view'),
+			duration = 600;
+
+		items.removeClass('active');
+		item.addClass('active');
+
+		if (!list.hasClass(viewClass)) {
+			list
+				.removeClass('products__list-rows')
+				.removeClass('products__list-lines')
+				.removeClass('products__list-grids')
+				.addClass(viewClass);
+		}
+	}
+
+	return {
+		init: function () {
+			_setUpListeners();
+		}
+	}
+}());
+
+var resetWidget = ( function () {
+
+	var _setUpListeners = function () {
+		$('.filter__reset').on('click', _resetFilter);
+	};
+
+	var _resetFilter = function (e) {
+		e.preventDefault();
+
+		var trigger = $(this),
+			block = trigger.closest('.filter__item'),
+			checkboxes = block.find('input:checkbox');
+
+			checkboxes.each(function () {
+				$(this).removeProp('checked');
+			});
+	}
+
+	return {
+		init: function () {
+			_setUpListeners();
+		}
+	}
+}());
+
+var slideshowWidget = ( function () {
+
+	var _setUpListeners = function () {
+		$('.products__slideshow-link').on('click', _changeSlide);
+	};
+
+	var _changeSlide = function (e) {
+		e.preventDefault();
+
+		var trigger = $(this),
+			img = trigger.find('.products__slideshow-list-img'),
+			path = img.data('src'),
+			item = trigger.closest('.products__slideshow-item'),
+			block = trigger.closest('.products__slideshow'),
+			items = block.find('.products__slideshow-item'),
+			display = block.find('.products__slideshow-display'),
+			slide = display.find('.products__slideshow-img');
+
+			if (!item.hasClass('active')) {
+				items.removeClass('active');
+				item.addClass('active');
+				slide.fadeOut('400', function() {
+					slide.attr('src', path).fadeIn();
+				});
+			}
+		
 	}
 
 	return {
@@ -138,13 +244,26 @@ $(document).ready( function () {
 		AccaWidget.init();
 	}
 
-	/*
 	if ($( ".sort__select-elem").length) {
 		$( ".sort__select-elem").select2({
-			minimumResultsForSearch: infinity
+			minimumResultsForSearch: Infinity
 		});
 	}
-	*/
 
+	if ($('.products__list').length) {
+		productsWidget.init();
+	}
+
+	if ($('.filter__reset').length) {
+		resetWidget.init();
+	}
+
+	if ($('.products__slideshow').length) {
+		slideshowWidget.init();
+	}
+
+	$('.attention__text').columnize({
+		width: 500
+	});
 	
 });

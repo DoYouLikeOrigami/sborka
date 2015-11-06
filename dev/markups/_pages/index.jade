@@ -26,14 +26,14 @@ block content
 								| Вид каталога
 							.sort__view
 								ul.sort__view-list
-									- var items = ['rows', 'grides', 'lines']
+									- var items = ['rows', 'grids', 'lines']
 									each item in items
 										li(class="sort__view-item sort__view-" + item, data-view= item)
-											a(href="").sort__view-link
+											a(href="#", data-view= item).sort__view-link
 												.sort__view-icon
 
 					.products
-						ul.products__list
+						ul.products__list.products__list-rows
 							- for (var i = 0; i < 4; i++)
 								li.products__item
 									.products__item-inner
@@ -41,12 +41,12 @@ block content
 											.products__slideshow
 												.products__slideshow-block
 													a(href="#").products__slideshow-display
-														img(src="http://lorempixel.com/200/200/technics/6", alt="").products__slideshow-img
+														img(src="img/goods/big.jpg", alt="").products__slideshow-img
 													ul.products__slideshow-list
-														-for (var j = 0; j < 3; j++)
+														-for (var j = 1; j < 4; j++)
 															li.products__slideshow-item
 																a(href="#").products__slideshow-link
-																	img(src="http://lorempixel.com/45/45/technics/" + j, alt="").products__slideshow-list-img
+																	img(src="img/goods/small-" + j + ".jpg", alt="slide", data-src= (j === 1) ? "img/goods/big.jpg" : "img/goods/small-" + j + ".jpg").products__slideshow-list-img
 												.products__article
 													.products__article-word Артикул
 													.products__article-num 189998
@@ -59,7 +59,7 @@ block content
 														li(class="products__option-item " + ((index++ % 2) ? '' : 'products__option-item-odd') )
 															.products__options-key= item
 															.products__options-value= options[item]
-												div(data-rating="4").products__rating
+												div(data-rating="3").products__rating
 										.products__right
 											.products__info
 												.products__price 11 390
@@ -81,20 +81,15 @@ block content
 									.pagination__mark
 
 
-
-
-
-
-
-
-
-
 			.attention
 				.main__title Важная информация
 				.attention__text
-					p lorem
-					p lorem
-					p lorem
-					p lorem
-					p lorem
-					p lorem
+					p lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					p lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					p lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					p lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					p lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					p lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					p lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					p lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+					p lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet

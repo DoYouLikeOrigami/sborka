@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&amp;subset=latin,cyrillic" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" media="screen, projection, print">
+		<link rel="stylesheet" type="text/css" href="css/select2.min.css" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen, projection, print">
 		<script src="/js/_vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
@@ -89,7 +90,7 @@
 								</div>
 								<div class="filter">
 									<ul class="filter__list">
-										<li class="filter__item">
+										<li class="filter__item active">
 											<div class="filter__title"><a href="#" class="filter__title-link">Наличие в магазинах</a></div>
 											<div class="filter__content">
 												<ul class="filter__choose">
@@ -108,7 +109,7 @@
 												</ul>
 											</div>
 										</li>
-										<li class="filter__item">
+										<li class="filter__item active">
 											<div class="filter__title"><a href="#" class="filter__title-link">Бренды</a></div>
 											<div class="filter__content">
 												<ul class="filter__choose filter__choose-checkboxes">
@@ -146,7 +147,7 @@
 												</ul>
 											</div>
 										</li>
-										<li class="filter__item"> 
+										<li class="filter__item active">
 											<div class="filter__title"><a href="#" class="filter__title-link">Цена</a></div>
 											<div class="filter__content">
 												<div class="filter__slider">
@@ -164,7 +165,7 @@
 												</div>
 											</div>
 										</li>
-										<li class="filter__item"> 
+										<li class="filter__item active">
 											<div class="filter__title"><a href="#" class="filter__title-link">Цвет</a></div>
 											<div class="filter__content">
 												<ul class="filter__colors">
@@ -178,7 +179,7 @@
 												<wrapper class="filter__reset--wrap"><a href="#" class="filter__reset">Сбросить фильтр</a></wrapper>
 											</div>
 										</li>
-										<li class="filter__item">
+										<li class="filter__item active">
 											<div class="filter__title"><a href="#" class="filter__title-link">Операционная система</a></div>
 											<div class="filter__content">
 												<ul class="filter__choose filter__choose-checkboxes">
@@ -236,27 +237,27 @@
 										<div class="sort__title">Вид каталога</div>
 										<div class="sort__view">
 											<ul class="sort__view-list">
-												<li data-view="rows" class="sort__view-item sort__view-rows"><a href="" class="sort__view-link">
+												<li data-view="rows" class="sort__view-item sort__view-rows"><a href="#" data-view="rows" class="sort__view-link">
 														<div class="sort__view-icon"></div></a></li>
-												<li data-view="grides" class="sort__view-item sort__view-grides"><a href="" class="sort__view-link">
+												<li data-view="grids" class="sort__view-item sort__view-grids"><a href="#" data-view="grids" class="sort__view-link">
 														<div class="sort__view-icon"></div></a></li>
-												<li data-view="lines" class="sort__view-item sort__view-lines"><a href="" class="sort__view-link">
+												<li data-view="lines" class="sort__view-item sort__view-lines"><a href="#" data-view="lines" class="sort__view-link">
 														<div class="sort__view-icon"></div></a></li>
 											</ul>
 										</div>
 									</div>
 								</div>
 								<div class="products">
-									<ul class="products__list">
+									<ul class="products__list products__list-rows">
 										<li class="products__item">
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/goods/big.jpg" alt="" class="products__slideshow-img"></a>
 															<ul class="products__slideshow-list">
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-list-img"></a></li>
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-list-img"></a></li>
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-1.jpg" alt="slide" data-src="img/goods/big.jpg" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-2.jpg" alt="slide" data-src="img/goods/small-2.jpg" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-3.jpg" alt="slide" data-src="img/goods/small-3.jpg" class="products__slideshow-list-img"></a></li>
 															</ul>
 														</div>
 														<div class="products__article">
@@ -296,7 +297,7 @@
 																<div class="products__options-value">Есть</div>
 															</li>
 														</ul>
-														<div data-rating="4" class="products__rating"></div>
+														<div data-rating="3" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -313,11 +314,11 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/goods/big.jpg" alt="" class="products__slideshow-img"></a>
 															<ul class="products__slideshow-list">
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-list-img"></a></li>
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-list-img"></a></li>
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-1.jpg" alt="slide" data-src="img/goods/big.jpg" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-2.jpg" alt="slide" data-src="img/goods/small-2.jpg" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-3.jpg" alt="slide" data-src="img/goods/small-3.jpg" class="products__slideshow-list-img"></a></li>
 															</ul>
 														</div>
 														<div class="products__article">
@@ -357,7 +358,7 @@
 																<div class="products__options-value">Есть</div>
 															</li>
 														</ul>
-														<div data-rating="4" class="products__rating"></div>
+														<div data-rating="3" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -374,11 +375,11 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/goods/big.jpg" alt="" class="products__slideshow-img"></a>
 															<ul class="products__slideshow-list">
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-list-img"></a></li>
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-list-img"></a></li>
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-1.jpg" alt="slide" data-src="img/goods/big.jpg" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-2.jpg" alt="slide" data-src="img/goods/small-2.jpg" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-3.jpg" alt="slide" data-src="img/goods/small-3.jpg" class="products__slideshow-list-img"></a></li>
 															</ul>
 														</div>
 														<div class="products__article">
@@ -418,7 +419,7 @@
 																<div class="products__options-value">Есть</div>
 															</li>
 														</ul>
-														<div data-rating="4" class="products__rating"></div>
+														<div data-rating="3" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -435,11 +436,11 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/goods/big.jpg" alt="" class="products__slideshow-img"></a>
 															<ul class="products__slideshow-list">
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-list-img"></a></li>
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-list-img"></a></li>
-																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-1.jpg" alt="slide" data-src="img/goods/big.jpg" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-2.jpg" alt="slide" data-src="img/goods/small-2.jpg" class="products__slideshow-list-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/goods/small-3.jpg" alt="slide" data-src="img/goods/small-3.jpg" class="products__slideshow-list-img"></a></li>
 															</ul>
 														</div>
 														<div class="products__article">
@@ -479,7 +480,7 @@
 																<div class="products__options-value">Есть</div>
 															</li>
 														</ul>
-														<div data-rating="4" class="products__rating"></div>
+														<div data-rating="3" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -513,12 +514,15 @@
 						<div class="attention">
 							<div class="main__title">Важная информация</div>
 							<div class="attention__text">
-								<p>lorem</p>
-								<p>lorem</p>
-								<p>lorem</p>
-								<p>lorem</p>
-								<p>lorem</p>
-								<p>lorem</p>
+								<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+								<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+								<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+								<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+								<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+								<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+								<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+								<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+								<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
 							</div>
 						</div>
 					</div>
@@ -528,7 +532,7 @@
 		<footer class="footer">
 			<div class="footer__top">
 				<div class="container">
-					<div class="footer__left"><a href="#" class="logo logo__footer"></a><img src="" alt="cooltech logo" class="logo__img">
+					<div class="footer__left"><a href="#" class="logo logo__footer"></a><img src="img/logos/logo-footer.png" alt="cooltech logo" class="logo__img">
 						<div class="logo__text">Cooltech</div>
 					</div>
 					<div class="footer__right">
